@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        width: 100vw;
+        background: rgb(138, 185, 255);
+        padding: 20px;
+        justify-content: space-between;
+    }
+    header ul{
+        display: flex;
+        list-style-type: none;
+    }
+    ul li{
+        padding: 0;
+        text-transform: capitalize;
+    }
+    li a{
+        padding: 5px 2rem;
+        
+        border-right: 2px solid white;
+      
+    }
+    a:hover{
+        background: rgb(53, 52, 146);
+    } 
+    .dropdown{
+        position: relative;
+    }
+    .dropdown-content{
+
+        align-items: auto;
+        position: absolute;
+        min-width: 120px;
+        display: none;
+        background-color: aquamarine;
+        padding-bottom: 20px;
+    }
+    .dropdown-content li{
+        line-height: 1.5rem;
+    }
+  
+   .dropdown:hover .dropdown-content{
+    display: block;
+   }
+  
+  
+ 
+</style>
+<body>
+  <header>
+    <ul>
+       <li><a href="#"></a>home</li>
+       <li><a href="#"></a>gallery</li>
+       <li class="dropdown"><a href="#"></a>about
+           <ul class="dropdown-content">
+            <li><a href="#"></a>home</li>
+            <li><a href="#"></a>gallery</li>
+            <li class="toadd"><a href="#"></a>about
+               
+            </li>
+            <li><a href="#"></a>contact</li>
+            <li><a href="#"></a>login</li>
+           </ul>
+        </li>
+       <li><a href="#"></a>contact</li>
+       <li><a href="#"></a>login</li>
+    </ul>
+  </header>  
+</body>
+</html>

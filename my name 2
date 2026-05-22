@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 40px;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-container .heading {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 50px;
+      }
+      .main-container .heading h3 {
+        font-size: 45px;
+        font-weight: bolder;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #222;
+      }
+      .main-container .heading h3 span {
+        font-weight: 100;
+        color: gray;
+      }
+      .main-container .flex-container {
+        display: flex;
+        flex-direction: row;
+        margin-right: 35px;
+      }
+      .flex-item img {
+        width: 100%;
+        object-fit: contain;
+        margin: 10px;
+        border: 1px solid gray;
+        padding: 8px;
+      }
+      .flex-container .flex-item {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        margin: 10px;
+        width: 32.5%;
+      }
+      .main-container .btn a {
+        display: block;
+        text-decoration: none;
+        background-color: #222;
+        color: #eee;
+        border-radius: 3px;
+        padding: 10px 20px;
+        margin: 45px 0px 100px 0px;
+        letter-spacing: 3px;
+      }
+      /* responsive media querry  */
+
+      @media only screen and (max-width: 700px) {
+        .main-container .flex-container {
+          flex-direction: column;
+        }
+        .flex-container .flex-item {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 660px) {
+        .main-container .heading {
+          width: 100%;
+
+          padding-bottom: 20px;
+        }
+        .main-container .heading h3 {
+          font-size: 30px;
+          color: white;
+          border-bottom: 2px solid white;
+        }
+
+        body {
+          background-color: #333;
+        }
+        .flex-item img {
+          border: 1px solid red;
+          box-shadow: 16px 16px 15px black;
+        }
+        .main-container .btn a {
+          background-color: rgb(89, 252, 89);
+          color: black;
+
+          box-shadow: 2px 2px 0px red;
+          border-radius: none;
+          border-top-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+         span {
+          color: red;
+        } */
+        .logo {
+          color: white;
+          font-size: 18px;
+          position: fixed;
+          top: 0;
+          left: 39%;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 class="logo">Vivek <span>Arya</span></h1> -->
+    <div class="main-container">
+      <div class="heading">
+        <h3>Photo <span>Gallery</span></h3>
+      </div>
+      <div class="flex-container">
+        <div class="flex-item">
+          <img src="software images/code-1839406_640.jpg" alt="" />
+          <img src="software images/coding-1853305_1280.jpg" alt="" />
+          <img src="software images/computer-8779036_640.webp" alt="" />
+          <img src="software images/engineer-4941341_640.jpg" alt="" />
+          <img src="software images/engineering-4915801_640.jpg" alt="" />
+        </div>
+        <div class="flex-item">
+          <img src="software images/laptop-2587070_640.jpg" alt="" />
+          <img src="software images/laptop-2589420_640.jpg" alt="" />
+          <img src="software images/source-4280758_640.jpg" alt="" />
+          <img src="software images/technology-8676540_640.webp" alt="" />
+          <img src="software images/computer-8779036_640.webp" alt="" />
+        </div>
+        <div class="flex-item">
+          <img src="software images/code-1839406_640.jpg" alt="" />
+          <img src="software images/coding-1853305_1280.jpg" alt="" />
+          <img src="software images/computer-8779036_640.webp" alt="" />
+          <img src="software images/engineer-4941341_640.jpg" alt="" />
+          <img src="software images/engineering-4915801_640.jpg" alt="" />
+        </div>
+      </div>
+      <div class="btn">
+        <a href="#">More</a>
+      </div>
+    </div>
+  </body>
+</html>

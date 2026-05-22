@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home </title>
+  <script src="https://kit.fontawesome.com/060f28b74e.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/saurav.jpeg">
+  <style>
+    header{
+      margin: 0px;
+      padding: 0px;
+      background-color: rgb(119, 150, 207);
+      box-sizing: border-box;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px  black;
+    }
+    nav ul{
+     list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    ul li{
+      display: inline;
+    }
+    li a{
+      display: block;
+      font-size: 25px;
+      color: white;
+      padding: 25px;
+      text-transform:capitalize;
+      text-decoration: none;
+      text-shadow: 4px 3px 10px rgb(17, 17, 17);
+    }
+    :hover{
+      color: blue;
+    }
+    :link{
+      color: yellow;
+    }
+    ul form{
+      padding: 25px;
+    }
+    ul a{
+      font-size: 20px;
+    }
+  ul input{
+    text-shadow: 2px 4px 3px yellow;
+   background-color:rgb(224, 60, 60) ;
+    margin: 20px;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+  }
+ /* header + div{
+    display: flex;
+    flex-direction: column;
+  }*/
+  header i{
+    color: rgb(31, 29, 29);
+  }
+  .search{
+    display: flex;
+    align-items: center;
+
+
+  }
+  .fa-magnifying-glass{
+    font-size: 25px;
+    margin: -55px;
+  }
+  .red{
+    background-color: red;
+  }
+  
+  </style>
+</head>
+<body>
+<header id="header">
+  <nav>
+    <ul>
+      <li><a href="#"><i class="fa-solid fa-house" style="color: rgb(17, 16, 16);"></i>home</a></li>
+      <li><a href="#">home</a></li>
+      <li><a href="#">home</a></li>
+      <li><a href="#">home</a></li>
+      <li><a href="#">home</a></li>
+      <div class="search">
+        <input type="search" width="2px" height="10px" placeholder="search"><i class="fa-solid fa-magnifying-glass" style="color: rgb(55, 73, 73);"></i>
+      </div>
+     <input type="submit" name="submit" value="submit">
+    </ul>
+  </nav>
+</header>
+<button class="btn">
+  click me 
+</button>
+<div>
+  <img src="images/istockphoto-920377882-612x612.webp" alt="" width="150px" >
+  <img src="images/istockphoto-920377882-612x612.webp" alt="" width="150px">
+  <img src="images/istockphoto-920377882-612x612.webp" alt="" width="150px" >
+  <img src="images/saurav.jpeg" alt="" width="150px">
+</div>
+
+<script>
+  let btn = document.getElementsByClassName('btn')[0];
+  
+  btn.addEventListener("click",()=>{
+    let header= document.querySelector('#header');
+    header.classList.toggle('red');
+  })
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook - Login Page</title>
+  <link rel="stylesheet" href="style.css">
+      <link rel="icon" href="https://media.istockphoto.com/id/1195458582/photo/aerial-view-of-misty-mountains-at-sunrise.webp?a=1&b=1&s=612x612&w=0&k=20&c=BRdUrBGcJ80x_DeNDBZZP8jUIOdISzhR05mLZK5I7As=">
+
+</head>
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+ body {
+  background: url('image.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Helvetica, Arial, sans-serif;
+  justify-content: center;
+  display: flex;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  gap: 50px;
+}
+.left {
+  font-size: 100px;
+  width: 5px;
+  
+}
+.left h1 {
+ margin-left: 40px;
+  color: #1877f2;
+  font-size: 70px;
+  margin-bottom: 7px;
+}
+.right {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px 4px  rgba(0, 0, 0, 0.897);
+  width: 360px;
+  
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 14px;
+  margin-bottom: 12px;
+  border: transparent;
+  border-radius: 6px;
+  font-size: 16px;
+}
+button {
+  padding: 14px;
+  background-color: #515252;
+  color: rgb(100, 220, 236);
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ccd2df;
+}
+a {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #2a2b2e;
+  text-decoration: none;
+}
+hr {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-color: #b1bbca;
+}
+
+.create-btn {
+  background-color: #565c55;
+}
+
+.create-btn:hover {
+  background-color: #5c645a;
+}
+</style>
+<body>
+  
+   <div class="left">
+      <h1>facebook</h1>
+      
+    </div>
+  <div class="container">
+   
+    <div class="right">
+      <form>
+        <input type="text" placeholder="Email or Phone Number" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+        <a href="#">Forgot password</a>
+        <hr>
+        <button class="create-btn">Create new account</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

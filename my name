@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: gray;
+      }
+
+      .gallery {
+        display: flex;
+        width: 75%;
+        flex-direction: row;
+        margin: 40px auto;
+      }
+      .gallery-item {
+        width: 45%;
+      }
+      .image img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .gallery-item .card {
+        margin: 15px;
+      }
+      .card .info {
+        background-color: red;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="gallery-item">
+        <div class="card">
+          <div class="image">
+            <img src="pixels/4_1_73f4be8ec2.webp" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/6_1_924aec290b.webp" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/coffeeMugs001.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/couple-2158309_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="card">
+          <div class="image">
+            <img src="pixels/love-2587456_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/love-2587456_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/table-4222263_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/loves-4329036_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="card">
+          <div class="image">
+            <img src="pixels/couple-6017739_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/couple-802062_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/love-4536550_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/sky-4587691_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="pixels/heart-529607_640.jpg" alt="" />
+          </div>
+          <div class="info">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque, deleniti?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/cfea9fe99d.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin: 0;
+    box-sizing: border-box;
+   }
+body{
+    background-color: #555;
+    box-sizing: border-box;
+    
+    
+    }
+nav{
+    
+    height: 70px;
+    line-height: 50px;
+    background-color: #333;
+    box-shadow: 12px 12px 20px black;
+    border-radius: 8px;
+    width: 90%;
+    margin: 20px auto;
+    }
+ul{
+   
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+.menu a{
+    color: #eee;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+
+
+
+.menu a:hover{
+    background-color: #555;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+    background-color: #333;
+    min-width: 160px;
+    position: absolute;
+    margin-left: 0;
+    display: none;
+
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown1{
+    position: relative;
+}
+.dropdown1-content{
+    background-color: #333;
+    min-width: 160px;
+    position: absolute;
+    top: 0;
+    left: 160px;
+    margin-left: 0;
+    display: none;
+}
+.dropdown1:hover .dropdown1-content{
+    display: block;
+}
+.dropdown2{
+    position: relative;
+}
+.dropdown2-content{
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    min-width: 160px;
+    left: 160px;
+    display: none;
+}
+.dropdown2:hover .dropdown2-content{
+    display: block;
+}
+.dropdown3{
+    position: relative;
+}
+.dropdown3-content{
+    position: absolute;
+    
+    background-color: #333;
+    min-width: 160px;
+    
+    display: none;
+}
+.dropdown3:hover .dropdown3-content{
+    display: block;
+}
+.dropdown4{
+    position: relative;
+}
+.dropdown4-content{
+    position: absolute;
+    
+    background-color: #333;
+    min-width: 160px;
+    top: 0;
+    left: 160px;
+    display: none;
+}
+.dropdown4:hover .dropdown4-content{
+    display: block;
+}
+h1{
+    text-align: center;
+    color: #eee;
+    font-size: 50px;
+}
+p{
+    column-count: 3;
+    column-rule-style: solid;
+    color: #fff;
+    
+}
+.fa-solid{
+    font-size: 15px;
+    position: relative;
+    top: -2px;
+    margin-right: 5px;
+}
+
+
+
+    
+    </style>
+
+ 
+</head>
+<body>
+ <nav>
+        <ul class="menu">
+            <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li class="dropdown3"><a href="#">Gallery</a>
+                <ul class="dropdown3-content">
+                    <li><a href="#">My Gallery</a></li>
+                    <li><a href="https://www.dreamstime.com/photos-images/nature.html" target="_blank">Nature</a></li>
+                    <li><a href="https://www.stockvault.net/c/animals"  target="_blank">Animals</a></li>
+                    <li><a href="https://www.istockphoto.com/photos/bird-photos"  target="_blank">Birds</a></li>
+                    
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#">About Us</a>
+            <ul class="dropdown-content">
+                <li><a href="#">My Name</a></li>
+                    <li class="dropdown1"><a href="#">My Class</a>
+                        <ul class="dropdown1-content">
+                            <li class="dropdown2"><a href="#">Name</a>
+                                <ul class="dropdown2-content">
+                                    <li><a href="#">Vivek</a></li>
+                                    <li><a href="#">Deepak</a></li>
+                                    <li><a href="#">Saurav</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown4"><a href="#">Class</a>
+                                <ul class="dropdown4-content">
+                                    <li><a href="#">BCA I<SUP>ST</SUP> SEM</a></li>
+                                    <li><a href="#">BCA I<SUP>ST</SUP> SEM</a></li>
+                                    <li><a href="#">BCA I<SUP>ST</SUP> SEM</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li><a href="https://srkpgcollege.com/">Roll</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">My Roll</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+ </nav>
+</body>
+</html>

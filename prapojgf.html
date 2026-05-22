@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coder Proposal 💖</title>
+<style>
+    body {
+        font-family: 'Comic Sans MS', sans-serif;
+        background-color: #ffe6f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        text-align: center;
+        transition: background 0.5s;
+        overflow: hidden;
+    }
+    #message {
+        font-size: 1.8em;
+        color: #ff0066;
+        margin: 20px;
+        min-height: 100px;
+    }
+    button {
+        background-color: #ff66b3;
+        border: none;
+        padding: 12px 25px;
+        font-size: 1.2em;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    button:hover {
+        transform: scale(1.1);
+    }
+    .heart {
+        position: absolute;
+        font-size: 2em;
+        color: #ff0066;
+        animation: floatUp 3s linear forwards;
+    }
+    @keyframes floatUp {
+        0% { opacity: 1; transform: translateY(0) scale(1); }
+        100% { opacity: 0; transform: translateY(-200px) scale(1.5); }
+    }
+</style>
+</head>
+<body>
+
+<div id="message">Click "Next" to see something special 💖</div>
+<button id="nextBtn">Next</button>
+
+<script>
+const messages = [
+    "Hey… mujhe tumse ek bug report karni hai 😅💻",
+    "Tum meri code ki syntax ho… bina tumhare main compile nahi hota 😅💖",
+    "Aur jab tum mere saath ho, toh meri life fully debugged lagti hai… sab perfect 😍",
+    "Tum meri semicolon ho… bina tumhare meri life ka code incomplete hai 😅💻",
+    "Toh kya tum meri girlfriend banogi, aur meri life ka main function hamesha complete karogi? 💖"
+];
+
+let step = 0;
+const messageDiv = document.getElementById('message');
+const btn = document.getElementById('nextBtn');
+
+btn.onclick = () => {
+    if(step < messages.length){
+        messageDiv.innerHTML = messages[step];
+        createHearts();
+        step++;
+        if(step === messages.length){
+            btn.textContent = "Yes ❤️";
+        }
+    } else {
+        messageDiv.innerHTML = "Yay! ❤️ Tumne meri life ka code successfully run kar diya! Ab hum dono ka program forever chalega 🎉💻💖";
+        document.body.style.backgroundColor = "#ff99cc";
+        btn.style.display = "none";
+        createHearts(20); // more hearts celebration
+    }
+};
+
+// Function to create floating hearts
+function createHearts(count = 5){
+    for(let i=0; i<count; i++){
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.textContent = '💖';
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        heart.style.top = Math.random() * window.innerHeight + 'px';
+        heart.style.animationDuration = (2 + Math.random() * 2) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 3000);
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .nav{
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        text-align: left;
+        list-style-type: none;
+      }  
+     .nav li{
+        
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+      }
+      .li :hover:not(.active){
+         background-color: brown;
+      }
+      .li :active{
+        color: rgb(120, 194, 123);
+      }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">our clints</a></li>
+        <li><a href="#">contact us</a></li>
+    </ul>
+</body>
+</html>

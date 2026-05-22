@@ -1,0 +1,88 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        width: 100vw;
+        background: tomato;
+         padding: 10px; 
+         box-shadow: 2px 2px 2px black;
+         border-radius: 10px;
+        justify-content: space-between;
+      }
+      header ul {
+        display: flex;
+
+        list-style-type: none;
+        
+        
+      }
+      ul li {
+        text-transform: capitalize;
+        
+       
+      }
+      li a {
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 5px 1rem;
+        border-right: 2px solid white;
+        transition: 2s;
+        
+      }
+      a:hover {
+        background: rgb(180, 69, 50);
+      }
+      .dropdown{
+        position: relative;
+      }                       
+      
+      .dropdown-content{
+        min-width: 150px;
+        display: none;
+        background: tomato;
+        padding-bottom: 30px;
+        position: absolute; 
+      }
+      .dropdown-content li{
+        line-height: 1.5rem;
+      }
+      .dropdown-content a{
+        border-right: none;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">contact</a></li>
+        <li class="dropdown"><a href="#">about</a>
+          <ul class="dropdown-content">
+            <li><a href="#">home</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">more</a></li>
+         </ul> 
+        </li>
+        <li><a href="#">more</a></li>
+        <li><a href="#">login</a></li>
+      </ul>
+    </header>
+  </body>
+</html>

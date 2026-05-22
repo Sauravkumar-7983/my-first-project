@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo list app</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: calc(100vh);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #cdf7f8;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        width: 25rem;
+        min-height: 30rem;
+        border: 2px solid rgb(187, 185, 185);
+        padding: 20px;
+        border-radius: 5px;
+      }
+      .container h2 {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      .container .input-area {
+        margin: 25px 0px;
+        height: 40px;
+        position: relative;
+      }
+      .input-area input[type="text"] {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        width: 80%;
+        padding-inline: 1rem;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+      }
+      .input-area button {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 20%;
+        border-radius: 0px;
+        outline: none;
+        border: none;
+        background-color: blue;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .input-area button:hover {
+        background: rgba(78, 78, 246);
+      }
+      .container input[type="text"]:focus {
+        border: 1px solid blue;
+      }
+      .container .todolist {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .todolist li {
+        background: white;
+        margin: 0px 0px;
+        width: 100%;
+        padding: 6px 15px;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: all 0.2;
+        display: flex;
+        justify-content: space-between;
+      }
+      .todolist li:hover {
+        border: 1px solid #eee;
+        border-right: none;
+        border-left: none;
+        box-sizing: border-box;
+        transform: scaleY(1.1);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3),
+          -1px -1px 5px rgba(0, 0, 0, 0.3);
+      }
+      .todolist li p {
+        word-break: break-word;
+      }
+      .todolist li button {
+        padding: 3px 6px;
+        background: transparent;
+        border: none;
+        margin-inline: 3px;
+        font-size: 1rem;
+      }
+      #del-btn {
+        color: red;
+      }
+      .edit-btn {
+        color: green;
+      }
+      .edit-delete-btn {
+        display: flex;
+        flex-direction: row;
+      }
+      .edit-delete-btn button:hover {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button id="theme">dark</button> -->
+    <div class="container">
+      <h2 id="heading">My To Do List</h2>
+      <div class="input-area">
+        <input
+          type="text"
+          placeholder="Add a new to do here..."
+          id="input-box"
+        />
+        <button type="button" id="button">Add</button>
+      </div>
+      <ul class="todolist" id="todolist"></ul>
+    </div>
+    <script>
+      let inputBox = document.getElementById("input-box");
+      let btn = document.getElementById("button");
+      let todoList = document.getElementById("todolist");
+
+      let EditTodo;
+
+      btn.addEventListener("click", () => {
+        let inputText = inputBox.value;
+        if (inputText.length <= 0) {
+          alert("You must to write something in your todo");
+        } else if (btn.innerHTML === "Edit") {
+          EditTodo.event.target.parentElement.previousElementSibling.innerHTML =
+            inputBox.value;
+
+          btn.innerHTML = "Add";
+          inputBox.value = "";
+        } else {
+          // create p tag
+          let p = document.createElement("p");
+          let li = document.createElement("li");
+          p.innerHTML = inputText;
+          li.appendChild(p);
+          todoList.appendChild(li);
+          let DeleteEditDiv = document.createElement("div");
+          DeleteEditDiv.setAttribute("class", "edit-delete-btn");
+          li.appendChild(DeleteEditDiv);
+          // create edit button
+          let editBtn = document.createElement("button");
+          editBtn.innerHTML = "Edit";
+          editBtn.setAttribute("type", "button");
+          editBtn.setAttribute("class", "edit-btn");
+          DeleteEditDiv.appendChild(editBtn);
+          // create delete/remove button
+          let delBtn = document.createElement("button");
+          delBtn.setAttribute("type", "button");
+          delBtn.setAttribute("id", "del-btn");
+          delBtn.innerHTML = "Remove";
+          DeleteEditDiv.appendChild(delBtn);
+
+          inputBox.value = "";
+        }
+      });
+      todoList.addEventListener("click", (event) => {
+        if (event.target.innerHTML === "Remove") {
+          let a = event.target.parentElement.parentElement;
+
+          todoList.removeChild(a);
+        } else if (event.target.innerHTML === "Edit") {
+          inputBox.value =
+            event.target.parentElement.previousElementSibling.innerHTML;
+          inputBox.focus();
+          btn.innerHTML = "Edit";
+          EditTodo = event;
+        }
+      });
+    </script>
+  </body>
+</html>
